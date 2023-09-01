@@ -1,23 +1,20 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { HydratedDocument } from 'mongoose';
 
-export type SubjectStaffDocument = HydratedDocument<SubjectStaff>;
+export type EmployeesProductsDocument = HydratedDocument<EmployeesProducts>;
 
 @Schema({ timestamps: true })
-export class SubjectStaff {
+export class EmployeesProducts {
   @Prop([{ type: mongoose.Schema.Types.ObjectId, ref:'Employees'  }])
 	employee_id:mongoose.Schema.Types.ObjectId;
 
 	@Prop([{ type: mongoose.Schema.Types.ObjectId, ref:'Employees'  }])
-	entrance_time_id:mongoose.Schema.Types.ObjectId;
-
-	@Prop([{ type: mongoose.Schema.Types.ObjectId, ref:'Employees'  }])
-	exit_time_id:mongoose.Schema.Types.ObjectId;
+	product_id:mongoose.Schema.Types.ObjectId;
 
 	@Prop()
-	date:Date;
+	start_year:string;
 
 	;
 }
 
-export const SubjectStaffSchema = SchemaFactory.createForClass(SubjectStaff);
+export const EmployeesProductsSchema = SchemaFactory.createForClass(EmployeesProducts);

@@ -180,7 +180,7 @@ makeFiles('employees', 'Employees', {
 });
 
 // PRODUCTS OF EMPLOYEES
-makeFiles('groups', 'Groups', {
+makeFiles('employees_products', 'EmployeesProducts', {
   employee_id: [
     'mongoose.Schema.Types.ObjectId',
     "[{ type: mongoose.Schema.Types.ObjectId, ref:'Employees'  }]",
@@ -214,7 +214,7 @@ makeFiles('accounting', 'Accounting', {
 });
 
 // EMPLOYEE ATTENDANCE
-makeFiles('subject-staff', 'SubjectStaff', {
+makeFiles('employee_attendance', 'EmployeeAttendance', {
   employee_id: [
     'mongoose.Schema.Types.ObjectId',
     "[{ type: mongoose.Schema.Types.ObjectId, ref:'Employees'  }]",
@@ -235,10 +235,10 @@ makeFiles('subject-staff', 'SubjectStaff', {
 
 // ENTRANCES
 makeFiles('entrance', 'Entrance', {
-  entrance_time: ['timestamp', '', ''],
+  entrance_time: ['Date', '', ''],
 });
 
 // EXITS
 makeFiles('exits', 'Exits', {
-  exits_time: ['timestamp', '', ''],
+  exits_time: ['Date', '', ''],
 });

@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class UpdateSubjectStaffDto {
+export class UpdateEmployeeAttendanceDto {
   @ApiProperty({ example: "" })
 	employee_id?: number;
 

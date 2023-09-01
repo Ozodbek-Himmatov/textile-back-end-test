@@ -1,14 +1,14 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class UpdateGroupsDto {
+export class CreateEmployeesProductsDto {
   @ApiProperty({ example: "" })
-	employee_id?: number;
+	employee_id: number;
 
 	@ApiProperty({ example: "" })
-	product_id?: number;
+	product_id: number;
 
 	@ApiProperty({ example: "2005" })
-	start_year?: string;
+	start_year: string;
 
 	
-}
+} 
