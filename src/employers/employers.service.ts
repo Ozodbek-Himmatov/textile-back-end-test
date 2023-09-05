@@ -26,6 +26,10 @@ export class EmployersService {
     return this.employersModel.findById(id).exec();
   }
 
+  async findOneLogin(full_name: string) {
+    return this.employersModel.findOne({ full_name }).exec();
+  }
+
   async update(id: string, updateEmployersDto: UpdateEmployersDto) {
     return this.employersModel
       .findByIdAndUpdate(id, updateEmployersDto, { new: true })

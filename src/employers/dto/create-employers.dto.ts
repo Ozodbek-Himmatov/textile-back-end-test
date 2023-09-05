@@ -2,7 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateEmployersDto {
   @ApiProperty({ example: "Ozodbek Khimmatov" })
-	first_name: string;
+	full_name: string;
 
 	@ApiProperty({ example: "123" })
 	login: string;

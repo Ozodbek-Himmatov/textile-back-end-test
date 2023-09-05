@@ -11,7 +11,9 @@ import { ExitsModule } from './exits/exits.module';
 import { ProductsModule } from './products/products.module';
 import { RawMaterialsModule } from './raw_materials/raw_materials.module';
 import { EmployeesProductsModule } from './employees_products/employees_products.module';
-import { EmployeeAttendanceModule } from './employee_attendance/employee_attendance.module';
+import { EmployeeAttendanceModule } from './user_attendance/user_attendance.module';
+import { AuthModule } from './auth/auth.module';
+import { RolesModule } from './roles/roles.module';
 
 @Module({
   imports: [
@@ -29,6 +31,8 @@ import { EmployeeAttendanceModule } from './employee_attendance/employee_attenda
     EmployeesProductsModule,
     RawMaterialsModule,
     EmployeeAttendanceModule,
+    AuthModule,
+    RolesModule,
   ],
 })
 export class AppModule {}

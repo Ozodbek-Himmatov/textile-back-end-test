@@ -1,8 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class UpdateEmployeeAttendanceDto {
+export class UpdateUserAttendanceDto {
   @ApiProperty({ example: "" })
-	employee_id?: number;
+	user_id?: number;
 
 	@ApiProperty({ example: "" })
 	entrance_time_id?: number;
@@ -12,6 +12,4 @@ export class UpdateEmployeeAttendanceDto {
 
 	@ApiProperty({ example: "12.12.2023" })
 	date?: Date;
-
-	
 }
