@@ -7,8 +7,8 @@ import {
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { Response } from 'express';
-import { EmployersService } from '../employers/employers.service';
-import { CreateEmployersDto } from 'src/employers/dto/create-employers.dto';
+import { EmployersService } from '../users/employers.service';
+import { CreateEmployersDto } from 'src/users/dto/create-user.dto';
 import { CreateEmployeesDto } from 'src/employees/dto/create-employees.dto';
 import { EmployeesService } from 'src/employees/employees.service';
 

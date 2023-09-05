@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { CreateEmployersDto } from './dto/create-employers.dto';
-import { UpdateEmployersDto } from './dto/update-employers.dto';
-import { Employers, EmployersDocument } from './schemas/employers.schema';
+import { CreateEmployersDto } from './dto/create-user.dto';
+import { UpdateEmployersDto } from './dto/update-user.dto';
+import { Employers, EmployersDocument } from './schemas/user.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 

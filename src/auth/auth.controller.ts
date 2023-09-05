@@ -2,7 +2,7 @@ import { Controller, Post, Body, HttpCode, Res } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
 import { Response } from 'express';
-import { CreateEmployersDto } from 'src/employers/dto/create-employers.dto';
+import { CreateEmployersDto } from 'src/users/dto/create-user.dto';
 import { CreateEmployeesDto } from 'src/employees/dto/create-employees.dto';
 
 @ApiTags('Authentication')

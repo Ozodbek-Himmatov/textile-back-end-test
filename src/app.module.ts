@@ -5,7 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { AccountingModule } from './accounting/accounting.module';
 import { EmployeesModule } from './employees/employees.module';
-import { EmployersModule } from './employers/employers.module';
+import { EmployersModule } from './users/employers.module';
 import { EntranceModule } from './entrance/entrance.module';
 import { ExitsModule } from './exits/exits.module';
 import { ProductsModule } from './products/products.module';

@@ -10,8 +10,8 @@ import {
   Query,
 } from '@nestjs/common';
 import { EmployersService } from './employers.service';
-import { CreateEmployersDto } from './dto/create-employers.dto';
-import { UpdateEmployersDto } from './dto/update-employers.dto';
+import { CreateEmployersDto } from './dto/create-user.dto';
+import { UpdateEmployersDto } from './dto/update-user.dto';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 // import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 import { HttpCode } from '@nestjs/common';
@@ -49,7 +49,10 @@ export class EmployersController {
   @ApiOperation({ summary: 'Update employers by id' })
   // @UseGuards(JwtAuthGuard)
   @Put(':id')
-  update(@Param('id') id: string, @Body() updateEmployersDto: UpdateEmployersDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updateEmployersDto: UpdateEmployersDto,
+  ) {
     return this.employersService.update(id, updateEmployersDto);
   }
 
