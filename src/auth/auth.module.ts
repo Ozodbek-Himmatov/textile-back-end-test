@@ -2,13 +2,12 @@ import { Module, forwardRef } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { JwtModule } from '@nestjs/jwt';
-import { EmployersModule } from '../users/employers.module';
-import { EmployeesModule } from 'src/employees/employees.module';
+import { UserModule } from '../users/user.module';
 
 @Module({
-  imports: [JwtModule.register({}), EmployersModule, EmployeesModule],
+  imports: [JwtModule.register({}), UserModule],
   controllers: [AuthController],
-  providers: [AuthService],
+  providers: [AuthService], 
   exports: [AuthService],
 })
 export class AuthModule {}
