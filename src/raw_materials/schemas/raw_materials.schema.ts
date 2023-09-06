@@ -6,21 +6,19 @@ export type RawMaterialsDocument = HydratedDocument<RawMaterials>;
 @Schema({ timestamps: true })
 export class RawMaterials {
   @Prop()
-	name:string;
+  name: string;
 
-	@Prop()
-	color:string;
+  @Prop()
+  color: string;
 
-	@Prop()
-	type_of_cloth:string;
+  @Prop()
+  type_of_cloth: string;
 
-	@Prop()
-	worth:number;
+  @Prop()
+  worth: number;
 
-	@Prop()
-	currency:string;
-
-	;
+  @Prop()
+  currency: string;
 }
 
 export const RawMaterialsSchema = SchemaFactory.createForClass(RawMaterials);

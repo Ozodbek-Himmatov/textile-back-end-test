@@ -8,10 +8,10 @@ export class UserAttendance {
   @Prop([{ type: mongoose.Schema.Types.ObjectId, ref:'Users'  }])
 	user_id:mongoose.Schema.Types.ObjectId;
 
-	@Prop([{ type: mongoose.Schema.Types.ObjectId, ref:'Users'  }])
+	@Prop([{ type: mongoose.Schema.Types.ObjectId, ref:'Entrance'  }])	
 	entrance_time_id:mongoose.Schema.Types.ObjectId;
 
-	@Prop([{ type: mongoose.Schema.Types.ObjectId, ref:'Users'  }])
+	@Prop([{ type: mongoose.Schema.Types.ObjectId, ref:'Exits'  }])
 	exit_time_id:mongoose.Schema.Types.ObjectId;
 
 	@Prop()
