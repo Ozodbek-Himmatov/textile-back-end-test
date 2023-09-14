@@ -5,7 +5,7 @@ export class CreateUserDto {
 	full_name: string;
 
 	@ApiProperty({ example: "" })
-	image: string;
+	image?: string;
 
 	@ApiProperty({ example: "123" })
 	login: string;

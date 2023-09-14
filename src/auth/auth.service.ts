@@ -9,6 +9,7 @@ import * as bcrypt from 'bcrypt';
 import { Response } from 'express';
 import { UserService } from '../users/user.service';
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
+// import { CreateUserRoleDto   } from 'src/user-role/dto/create-user-role.dto';
 
 @Injectable()
 export class AuthService {
@@ -26,6 +27,7 @@ export class AuthService {
         HttpStatus.BAD_REQUEST,
       );
     }
+    console.log(user);
     const isMatchPass = await bcrypt.compare(password, user.password);
     if (!isMatchPass) {
       throw new UnauthorizedException({

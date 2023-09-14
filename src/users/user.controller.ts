@@ -13,8 +13,8 @@ import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-// import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 import { HttpCode } from '@nestjs/common';
+import { JwtAuthGuard } from 'src/guards/jwt-auth.guard';
 
 @ApiTags('User')
 @Controller('user')
@@ -31,7 +31,7 @@ export class UserController {
 
   @HttpCode(200)
   @ApiOperation({ summary: 'Find all user' })
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   @Get()
   findAll(@Query() query: any) {
     return this.userService.findAll(query);
