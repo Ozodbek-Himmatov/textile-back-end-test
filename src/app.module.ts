@@ -13,7 +13,6 @@ import { EmployeesProductsModule } from './employees_products/employees_products
 import { UserAttendanceModule } from './user_attendance/user_attendance.module';
 import { AuthModule } from './auth/auth.module';
 import { RolesModule } from './roles/roles.module';
-import { UserRoleModule } from './user-role/user-role.module';
 
 @Module({
   imports: [
@@ -32,7 +31,6 @@ import { UserRoleModule } from './user-role/user-role.module';
     RawMaterialsModule,
     RolesModule,
     UserAttendanceModule,
-    UserRoleModule,
   ],
 })
 export class AppModule {}

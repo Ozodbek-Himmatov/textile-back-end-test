@@ -23,7 +23,7 @@ export class AuthService {
     const user = await this.userService.findOneLogin(full_name);
     if (!user) {
       throw new HttpException(
-        { msg: `No Such Admin!` },
+        { message: `No Such Admin!` },
         HttpStatus.BAD_REQUEST,
       );
     }
@@ -31,7 +31,7 @@ export class AuthService {
     const isMatchPass = await bcrypt.compare(password, user.password);
     if (!isMatchPass) {
       throw new UnauthorizedException({
-        msg: `Password Wrong!`,
+        message: `Password Wrong!`,
       });
     }
     const tokens = await this.getToken(user.id, 'USER');
@@ -48,7 +48,7 @@ export class AuthService {
 
     const response = {
       status: 200,
-      msg: 'Success!',
+      message: 'Success!',
       user: updatedUser,
       tokens,
     };

@@ -1,6 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateUserDto {
+	@ApiProperty({ example: '' })
+  role_id: number;
+	
   @ApiProperty({ example: "Ozodbek Khimmatov" })
 	full_name: string;
 
